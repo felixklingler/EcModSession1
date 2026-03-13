@@ -49,27 +49,28 @@ class Point: # classes start with capital letters always
         return self.distance_origin() < other.distance_origin()
 
 
-p1= Point(1,2)
-p2= Point(3,4)
-p3= Point("Bob",[1,2,3])
+if __name__ == "__main__": # Executes the code only if it is being run as the main file
+    p1= Point(1,2)
+    p2= Point(3,4)
+    p3= Point("Bob",[1,2,3])
 
 
-print(p1.x, p1.y)
-print(p2.x, p2.y)
-print(p3.x, p3.y) # not ideal
-print(p1)
+    print(p1.x, p1.y)
+    print(p2.x, p2.y)
+    print(p3.x, p3.y) # not ideal
+    print(p1)
 
-print(f"{p2} distance to origin is {p2.distance_origin()}")
-# print(f"{p3} distance to origin is {p3.distance_origin()}") # makes error, since values are not float
+    print(f"{p2} distance to origin is {p2.distance_origin()}")
+    # print(f"{p3} distance to origin is {p3.distance_origin()}") # makes error, since values are not float
 
-print(f"the distance between {p1} and {p2} is {p1.distance_to(p2)}")
+    print(f"the distance between {p1} and {p2} is {p1.distance_to(p2)}")
 
-p1 = Point(6,10)
-p2 = Point(6,15)
-p3 = Point(12,5)
-p4 = Point(1,1)
+    p1 = Point(6,10)
+    p2 = Point(6,15)
+    p3 = Point(12,5)
+    p4 = Point(1,1)
 
-points = [p1, p2, p3, p4, Point(15,6)] # adding a point without adding a line
-print(points)
-points.sort() # sorts by "size", which in this case is distance to origin
-print(points)
+    points = [p1, p2, p3, p4, Point(15,6)] # adding a point without adding a line
+    print(points)
+    points.sort() # sorts by "size", which in this case is distance to origin
+    print(points)
