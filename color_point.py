@@ -5,6 +5,11 @@ class ColorPoint(Point):
     Color Point class inheriting from Point class
     """
     def __init__(self, x, y, color):
+        # check if x and y are numbers
+        if not isinstance(x, (int, float)):
+            raise TypeError("x must be a number")
+        if not isinstance(y, (int, float)):
+            raise TypeError("y must be a number")
         self.x = x
         self.y = y
         self.color = color
@@ -26,3 +31,5 @@ if __name__ == "__main__":
     print(color_points)
     color_points.sort()
     print(color_points)
+    p5 = ColorPoint("bob", "james", 'red')
+    print(p5)
